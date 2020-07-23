@@ -28,6 +28,9 @@
     "my-angular-app-e2e": {
       "tags": [],
       "implicitDependencies": ["my-angular-app"]
+    },
+    "utils": {
+      "tags": []
     }
   }
 }
