@@ -16,7 +16,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@trucos/utils": ["libs/utils/src/index.ts"]
+      "@trucos/utils": ["libs/utils/src/index.ts"],
+      "@trucos/models": ["libs/models/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

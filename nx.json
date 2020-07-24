@@ -38,6 +38,9 @@
     "my-react-app-e2e": {
       "tags": [],
       "implicitDependencies": ["my-react-app"]
+    },
+    "models": {
+      "tags": []
     }
   }
 }
