@@ -24,3 +24,7 @@ export interface Author {
   name: string;
   email: string;
 }
+
+export interface Tool {
+  id: string;
+}

@@ -9,3 +9,5 @@ export function utils(): string {
 export function greet(name: string): string {
   return `Hola ${name}`;
 }
+
+export class Person {}
