@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Author } from '@trucos/models';
 import { greet } from '@trucos/utils';
 
 @Component({
@@ -9,5 +10,6 @@ import { greet } from '@trucos/utils';
 export class AppComponent {
   title = 'my-angular-app';
 
-  greeting = greet('yacafx');
+  greeting = greet('yacaFx');
+  autor: Author;
 }
