@@ -5,7 +5,7 @@ interface Info {
   version: string;
 }
 
-interface Result {
+export interface User {
   gender?: string;
   name?: Name;
   location?: Location;
@@ -20,7 +20,7 @@ interface Result {
   nat?: string;
 }
 
-interface Picture {
+export interface Picture {
   large: string;
   medium: string;
   thumbnail: string;
