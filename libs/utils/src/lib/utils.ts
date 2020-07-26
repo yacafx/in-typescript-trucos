@@ -10,4 +10,16 @@ export function greet(name: string): string {
   return `Hola ${name}`;
 }
 
-export class Person {}
+export class Person {
+  name: string;
+  lastName: string;
+
+  getFullName(): string {
+    return `${this.name} ${this.lastName}`;
+  }
+}
+
+const person = new Person();
+person.name = 'Sergio';
+person.lastName = 'Brito';
+person.getFullName();
