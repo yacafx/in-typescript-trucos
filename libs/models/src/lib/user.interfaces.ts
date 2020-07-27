@@ -71,7 +71,7 @@ interface Street {
   name: string;
 }
 
-interface Name {
+export interface Name {
   title: string;
   first: string;
   last: string;

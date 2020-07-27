@@ -1,4 +1,4 @@
-import { Location, Picture, User } from '@trucos/models';
+import { Location, Picture, SimpleNameType, User } from '@trucos/models';
 
 export function utils(): string {
   return 'utils';
@@ -48,6 +48,11 @@ const user: Required<User> = {
   id: {},
   picture: {},
   nat: '',
+};
+
+const name: SimpleNameType = {
+  first: 'Sergio',
+  last: 'Brito',
 };
 
 const userPhoto: Readonly<Picture> = {
