@@ -1,4 +1,4 @@
-import { Picture } from '@trucos/models';
+import { Location, Picture } from '@trucos/models';
 
 export function utils(): string {
   return 'utils';
@@ -16,6 +16,7 @@ export class Person {
   readonly name: string;
   lastName: string;
   age: number | undefined | null;
+  location: Partial<Location>;
 
   getFullName(): string {
     return `${this.name} ${this.lastName}`;
@@ -26,6 +27,11 @@ const person = new Person();
 // person.name = 'Sergio';
 person.lastName = 'Brito';
 person.age = null;
+
+person.location = {
+  state: 'Tabasco',
+  country: 'México',
+};
 
 person.getFullName();
 
