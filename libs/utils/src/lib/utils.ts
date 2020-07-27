@@ -15,6 +15,7 @@ export function greet(name: string): string {
 export class Person {
   readonly name: string;
   lastName: string;
+  age: number | undefined | null;
 
   getFullName(): string {
     return `${this.name} ${this.lastName}`;
@@ -24,6 +25,8 @@ export class Person {
 const person = new Person();
 // person.name = 'Sergio';
 person.lastName = 'Brito';
+person.age = null;
+
 person.getFullName();
 
 const userPhoto: Readonly<Picture> = {
