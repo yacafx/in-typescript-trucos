@@ -7,16 +7,16 @@ interface Info {
 
 export interface User {
   gender?: string;
-  name?: Name;
-  location?: Location;
+  name?: Partial<Name>;
+  location?: Partial<Location>;
   email?: string;
-  login?: Login;
-  dob?: Dob;
-  registered?: Dob;
+  login?: Partial<Login>;
+  dob?: Partial<Dob>;
+  registered?: Partial<Dob>;
   phone?: string;
   cell?: string;
-  id?: Id;
-  picture?: Picture;
+  id?: Partial<Id>;
+  picture?: Partial<Picture>;
   nat?: string;
 }
 
