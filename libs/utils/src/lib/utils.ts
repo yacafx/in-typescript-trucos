@@ -24,6 +24,8 @@ export class Person {
   age: number | undefined | null;
   location: Partial<Location>;
 
+  constructor() {}
+
   getFullName(): string {
     return `${this.name} ${this.lastName}`;
   }
@@ -75,7 +77,11 @@ const userPhoto: Readonly<Picture> = {
 // userPhoto.thumbnail = 'https://via.placeholder.com/500.png';
 
 function getStreetNumber(client: User | Company): number | string {
-  if (client.location?.street?.number) {
+  if (
+    client.location?.street?.number &&
+    typeof client.location?.street?.number === 'number' &&
+    'location' in client
+  ) {
     return client.location?.street?.number;
   } else {
     return 'Sin número';
@@ -94,3 +100,13 @@ let value2: any = 'true';
 let flag: boolean = value;
 
 typeof flag; // ?
+
+// *** Type Guards *** //
+// *** Tipos primitivos (typeof): number, string, boolean y symbol
+// *** Por instancia (instanceof): variable creada a través de un constructor
+// *** Por tipo de propiedad (in)
+
+function notify(persona: Person) {
+  if (persona instanceof Person) {
+  }
+}
