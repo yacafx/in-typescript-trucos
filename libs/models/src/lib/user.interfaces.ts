@@ -76,3 +76,8 @@ export interface Name {
   first: string;
   last: string;
 }
+
+export interface Company {
+  name: string;
+  location: Location;
+}
