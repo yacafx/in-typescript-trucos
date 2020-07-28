@@ -83,3 +83,14 @@ function getStreetNumber(client: User | Company): number | string {
 }
 
 getStreetNumber(user); // ?
+
+// tslint:disable: prefer-const
+// tslint:disable: no-unused-expression
+
+let value: unknown;
+
+let value2: any = 'true';
+
+let flag: boolean = value;
+
+typeof flag; // ?
