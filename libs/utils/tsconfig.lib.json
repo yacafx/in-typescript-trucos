@@ -5,7 +5,8 @@
     "outDir": "../../dist/out-tsc",
     "declaration": true,
     "types": ["node"],
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true
   },
   "exclude": ["**/*.spec.ts"],
   "include": ["**/*.ts"]

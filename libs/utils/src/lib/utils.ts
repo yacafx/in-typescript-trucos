@@ -20,11 +20,13 @@ export function greet(name: string): string {
 
 export class Person {
   readonly name: string;
-  lastName: string;
+  lastName = '';
   age: number | undefined | null;
-  location: Partial<Location>;
+  location!: Partial<Location>;
 
-  constructor() {}
+  constructor() {
+    this.name = 'yacafx';
+  }
 
   getFullName(): string {
     return `${this.name} ${this.lastName}`;
