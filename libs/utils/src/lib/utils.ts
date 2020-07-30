@@ -177,3 +177,12 @@ async function manageClients() {
 }
 
 manageClients();
+
+//*** Números legibles en TypeScript
+let quantity = 1_000_000_000;
+
+quantity; // ?
+
+// setInterval(() => {
+//   quantity++; // ?
+// }, 3_000);
