@@ -1,10 +1,12 @@
 import {
   Company,
   Location,
+  Name,
   Picture,
   SimpleNameType,
   User,
 } from '@trucos/models';
+const fetch = require('node-fetch');
 
 export function utils(): string {
   return 'utils';
@@ -145,3 +147,33 @@ const consolesA: readonly string[] = ['Commodore', 'Amstrad', 'ZX Spectrum'];
 
 consoles[0] = 'SX-64';
 consolesA[0] = 'SX-64';
+
+//*** Identificación de tipos de datos
+
+const status: any = true;
+
+let controlStatus = <boolean>status;
+
+controlStatus = 'hola';
+
+const fullName = <Name>{};
+
+fullName.first = 'Sergio';
+fullName.last = 'Brito';
+fullName.title = 'Sr.';
+
+export async function getRemoteData(url: string) {
+  const response = await fetch(url);
+  const body = await response.json();
+  return body.results;
+}
+
+async function manageClients() {
+  const clients = <User[]>(
+    await getRemoteData('https://randomuser.me/api?results=5')
+  );
+
+  clients[0].name; // ?
+}
+
+manageClients();
