@@ -112,3 +112,22 @@ function notify(persona: Person) {
   if (persona instanceof Person) {
   }
 }
+
+//***  Bloqueo de propiedades de objetos
+const directions = {
+  UP: 'Up',
+  DOWN: 'Down',
+  LEFT: 'Left',
+  RIGHT: 'Right',
+  console: {
+    name: 'Commodore',
+    bits: '64',
+  },
+} as const;
+
+// const console = 'Amstrad';
+
+// console = ''
+
+directions.UP = 'arriba'; // ?
+directions.console.name = ' Amstrad'; // ?
