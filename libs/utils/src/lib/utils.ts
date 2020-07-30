@@ -162,15 +162,15 @@ fullName.first = 'Sergio';
 fullName.last = 'Brito';
 fullName.title = 'Sr.';
 
-export async function getRemoteData(url: string) {
+export async function getRemoteData<T>(url: string): Promise<T> {
   const response = await fetch(url);
   const body = await response.json();
   return body.results;
 }
 
 async function manageClients() {
-  const clients = <User[]>(
-    await getRemoteData('https://randomuser.me/api?results=5')
+  const clients = await getRemoteData<User[]>(
+    'https://randomuser.me/api?results=5'
   );
 
   clients[0].name; // ?
@@ -186,3 +186,13 @@ quantity; // ?
 // setInterval(() => {
 //   quantity++; // ?
 // }, 3_000);
+
+//*** Tipos de datos genéricos
+
+interface KeyPair<T, U> {
+  key: T;
+  value: U;
+}
+
+let pair1: KeyPair<number, string> = { key: 1, value: 'Up' };
+let pair2: KeyPair<number, boolean> = { key: 2, value: false };
