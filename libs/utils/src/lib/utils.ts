@@ -129,5 +129,19 @@ const directions = {
 
 // console = ''
 
-directions.UP = 'arriba'; // ?
-directions.console.name = ' Amstrad'; // ?
+// directions.UP = 'arriba'; // ?
+// directions.console.name = ' Amstrad'; // ?
+
+//*** Arreglos de solo lectura
+// const consoles: readonly [string, string, string, number] = [
+//   'Commodore',
+//   'Amstrad',
+//   'ZX Spectrum',
+//   20
+// ];
+
+const consoles: ReadonlyArray<string> = ['Commodore', 'Amstrad', 'ZX Spectrum'];
+const consolesA: readonly string[] = ['Commodore', 'Amstrad', 'ZX Spectrum'];
+
+consoles[0] = 'SX-64';
+consolesA[0] = 'SX-64';
